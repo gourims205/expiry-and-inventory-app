@@ -1,12 +1,11 @@
-# 📦 Expiry & Inventory Management App
+#  Expiry & Inventory Management App
 
 A Flutter mobile application to track product expiry dates, manage inventory by category, scan barcodes and bills, and receive scheduled notifications before items expire.
 
----
 
 
 
-## 📱 Screenshots
+##  Screenshots
 
 <img width="200" src="https://github.com/user-attachments/assets/3ce0952d-3d7b-4548-89b3-79ddbce548d7" />
 <img width="200" src="https://github.com/user-attachments/assets/65ffa009-ca8d-4a41-b97f-eaea1e2bb3bf" />
@@ -25,23 +24,21 @@ A Flutter mobile application to track product expiry dates, manage inventory by 
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🔐 **Authentication** — Email/password sign-up, email verification, forgot password, auto-login
-- 📋 **Item Management** — Add, edit, delete items with search and sort options
-- 📷 **Barcode Scanner** — Scan products and auto-fill details from Open Facts databases
-- 🧾 **Bill Scanner** — Photograph a shopping bill; OCR extracts and looks up all products at once
-- 🗂️ **Groups** — Browse inventory organised by category
-- ⚠️ **Expired Items** — Dedicated view for items past their expiry date
-- 🔔 **Notifications** — Scheduled local alerts before items expire; persists across reboots
-- ⚙️ **Settings** — Change email, change password, reset password, logout
+-  **Authentication** — Email/password sign-up, email verification, forgot password, auto-login
+-  **Item Management** — Add, edit, delete items with search and sort options
+-  **Barcode Scanner** — Scan products and auto-fill details from Open Facts databases
+-  **Bill Scanner** — Photograph a shopping bill; OCR extracts and looks up all products at once
+-  **Groups** — Browse inventory organised by category
+-  **Expired Items** — Dedicated view for items past their expiry date
+-  **Notifications** — Scheduled local alerts before items expire; persists across reboots
+-  **Settings** — Change email, change password, reset password, logout
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
-| | |
-|---|---|
 | Framework | Flutter 3 / Dart |
 | Auth & Database | Firebase Authentication + Cloud Firestore |
 | Local Notifications | flutter_local_notifications + timezone |
@@ -54,9 +51,9 @@ A Flutter mobile application to track product expiry dates, manage inventory by 
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
-```
+
 lib/
 ├── main.dart                   # Entry point, Firebase init, auth wrapper
 ├── firebase_options.dart       # Firebase platform config
@@ -83,11 +80,9 @@ lib/
 ├── settings_page.dart          # Account settings
 │
 └── notification_service.dart   # Notification scheduling logic
-```
 
----
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -119,15 +114,15 @@ flutter pub get
 
 ### 4. Run the app
 
-```bash
+bash
 flutter run
-```
 
----
 
-## 📦 Dependencies
 
-```yaml
+
+##  Dependencies
+
+yaml
 dependencies:
   firebase_core: ^4.5.0
   firebase_auth: ^6.2.0
@@ -148,8 +143,7 @@ dev_dependencies:
 
 ---
 
-## 🗄️ Firestore Data Structure
-
+##  Firestore Data Structure
 ### Collection: `items`
 
 | Field | Type | Description |
@@ -181,33 +175,31 @@ service cloud.firestore {
 
 ---
 
-## 🔔 Notification Setup
+##  Notification Setup
 
 Notifications are scheduled using `flutter_local_notifications` with `zonedSchedule`. The timezone is set to `Asia/Kolkata` by default — update this in `notification_service.dart` if needed:
 
-```dart
+dart
 tz.setLocalLocation(tz.getLocation('Your/Timezone'));
-```
+
 
 The following permissions are declared in `AndroidManifest.xml`:
 
-```xml
+xml
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
 <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 <uses-permission android:name="android.permission.VIBRATE"/>
 <uses-permission android:name="android.permission.WAKE_LOCK"/>
-```
 
----
 
-## 🤝 Contributing
+
+
+##  Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.
 
----
-
-## 📄 License
+##  License
 
 This project is licensed under the [MIT License](LICENSE).
